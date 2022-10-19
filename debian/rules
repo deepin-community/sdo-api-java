@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+
+export JAVA_HOME=/usr/lib/jvm/default-java
+export JH_JAR_EXTRA=xml
+
+%:
+	dh --with javahelper $@
+
+override_jh_build:
+	cp -a src/main/resources/xml .
+	jh_build sdo-api.jar src/main/java
+
+override_dh_clean:
+	dh_clean
+	rm -rf xml
+
+get-orig-source:
+	cd $(dir $(firstword $(MAKEFILE_LIST)))../ && \
+	uscan \
+		--verbose \
+		--no-symlink \
+		--destdir $(CURDIR)      \
+		--watchfile debian/watch \
+		--force-download

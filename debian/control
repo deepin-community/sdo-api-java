@@ -1,0 +1,61 @@
+Source: sdo-api-java
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Miguel Landaeta <miguel@miguel.cc>
+Section: java
+Priority: optional
+Build-Depends: debhelper (>= 7.0.50), default-jdk, javahelper
+Standards-Version: 3.8.4
+Vcs-Git: git://git.debian.org/git/pkg-java/sdo-api-java.git
+Vcs-Browser: http://git.debian.org/?p=pkg-java/sdo-api-java.git
+
+Package: libsdo-api-java
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: libsdo-api-java-doc (= ${binary:Version})
+Description: Service Data Objects 2.1 Java API spec
+ SDO is a framework for data application development, which
+ includes an architecture and API. SDO does the following:
+ .
+  - Simplifies the J2EE data programming model
+  - Abstracts data in a service oriented architecture (SOA)
+  - Unifies data application development
+  - Supports and integrates XML
+  - Incorporates J2EE patterns and best practices
+ .
+ With SDO, you do not need to be familiar with a
+ technology-specific API in order to access and utilize data.
+ You need to know only one API, the SDO API, which lets you
+ work with data from multiple data sources, including
+ relational databases, entity EJB components, XML pages, Web
+ services, the Java Connector Architecture, JavaServer Pages
+ pages, and more.
+ .
+ This package contains only a Java API of SDO 2.1 spec.
+ EclipseLink is a implementation of this spec.
+
+Package: libsdo-api-java-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Suggests: libsdo-api-java (= ${binary:Version})
+Description: Documentation for libsdo-api-java
+ Documentation for SDO that is a framework for data application
+ development, which includes an architecture and API. SDO does
+ the following:
+ .
+  - Simplifies the J2EE data programming model
+  - Abstracts data in a service oriented architecture (SOA)
+  - Unifies data application development
+  - Supports and integrates XML
+  - Incorporates J2EE patterns and best practices
+ .
+ With SDO, you do not need to be familiar with a
+ technology-specific API in order to access and utilize data.
+ You need to know only one API, the SDO API, which lets you
+ work with data from multiple data sources, including
+ relational databases, entity EJB components, XML pages, Web
+ services, the Java Connector Architecture, JavaServer Pages
+ pages, and more.
+ .
+ This package contains only a Java API of SDO 2.1 spec.
+ EclipseLink is a implementation of this spec.
